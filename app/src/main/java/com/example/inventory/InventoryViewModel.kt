@@ -14,6 +14,15 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         }
     }
 
+    private fun getNewItemEntry(itemName: String, itemPrice: String, itemCount: String): Item {
+        return Item(
+            itemName = itemName,
+            itemPrice = itemPrice.toDouble(),
+            quantityInStock = itemCount.toInt()
+        )
+    }
+
+
 
 
 }
