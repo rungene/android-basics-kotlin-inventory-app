@@ -22,7 +22,10 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         )
     }
 
-
+    fun addNewItem(itemName: String, itemPrice: String, itemCount: String) {
+        val newItem = getNewItemEntry(itemName, itemPrice, itemCount)
+        insertItem(newItem)
+    }
 
 
 }
