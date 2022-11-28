@@ -18,6 +18,7 @@ abstract class ItemRoomDatabase : RoomDatabase() {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder()
 
+                return instance
             }
 
         }
