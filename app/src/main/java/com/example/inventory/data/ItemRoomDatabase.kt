@@ -8,7 +8,11 @@ abstract class ItemRoomDatabase : RoomDatabase() {
 
     abstract fun itemDao(): ItemDao
 
-    companion object {}
+    companion object {
+        @Volatile
+        private var INSTANCE: ItemRoomDatabase? = null
+
+    }
 
 
 }
