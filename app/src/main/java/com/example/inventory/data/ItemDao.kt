@@ -17,7 +17,7 @@ interface ItemDao {
     @Query("SELECT * from item WHERE id = :id")
     fun getItem(id: Int): Flow<Item>
 
-
-
+    @Query("SELECT * from item ORDER BY name ASC")
+    fun getItems(): Flow<List<Item>>
 
 }
