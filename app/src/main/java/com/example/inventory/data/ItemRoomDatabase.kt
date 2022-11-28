@@ -22,8 +22,7 @@ abstract class ItemRoomDatabase : RoomDatabase() {
                     "item_database"
                 )
                     .fallbackToDestructiveMigration()
-
-
+                    .build()
                 return instance
             }
 
