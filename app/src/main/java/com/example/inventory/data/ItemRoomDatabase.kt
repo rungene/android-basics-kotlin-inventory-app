@@ -21,6 +21,8 @@ abstract class ItemRoomDatabase : RoomDatabase() {
                     ItemRoomDatabase::class.java,
                     "item_database"
                 )
+                    .fallbackToDestructiveMigration()
+
 
                 return instance
             }
