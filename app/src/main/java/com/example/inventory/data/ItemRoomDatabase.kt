@@ -8,4 +8,7 @@ abstract class ItemRoomDatabase : RoomDatabase() {
 
     abstract fun itemDao(): ItemDao
 
+    companion object {}
+
+
 }
