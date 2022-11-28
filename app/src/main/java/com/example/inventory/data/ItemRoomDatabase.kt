@@ -13,7 +13,10 @@ abstract class ItemRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: ItemRoomDatabase? = null
 
-        fun getDatabase(context: Context): ItemRoomDatabase {}
+        fun getDatabase(context: Context): ItemRoomDatabase {
+            return INSTANCE ?: synchronized(this) { }
+
+        }
 
     }
 
