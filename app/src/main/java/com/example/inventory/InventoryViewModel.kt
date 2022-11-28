@@ -2,9 +2,13 @@ package com.example.inventory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.inventory.data.Item
 import com.example.inventory.data.ItemDao
 
 class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
+    private fun insertItem(item: Item) {
+    }
+
 
 }
 class InventoryViewModelFactory(private val itemDao: ItemDao) : ViewModelProvider.Factory {
