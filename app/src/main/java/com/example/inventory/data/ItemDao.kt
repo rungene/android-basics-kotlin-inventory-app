@@ -1,6 +1,7 @@
 package com.example.inventory.data
 
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ItemDao {
@@ -12,6 +13,10 @@ interface ItemDao {
 
     @Delete
     suspend fun delete(item: Item)
+
+    @Query("SELECT * from item WHERE id = :id")
+    fun getItem(id: Int): Flow<Item>
+
 
 
 
