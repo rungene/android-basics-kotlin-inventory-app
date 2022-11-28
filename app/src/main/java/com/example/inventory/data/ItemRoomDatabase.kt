@@ -1,5 +1,6 @@
 package com.example.inventory.data
 
+import android.content.Context
 import androidx.room.Database
 import androidx.room.RoomDatabase
 
@@ -11,6 +12,8 @@ abstract class ItemRoomDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: ItemRoomDatabase? = null
+
+        fun getDatabase(context: Context): ItemRoomDatabase {}
 
     }
 
