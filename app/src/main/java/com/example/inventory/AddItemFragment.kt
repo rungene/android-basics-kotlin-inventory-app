@@ -60,7 +60,18 @@ class AddItemFragment : Fragment() {
     }
 
     private fun isEntryValid(): Boolean {
+        return viewModel.isEntryValid(
+            binding.itemName.text.toString(),
+            binding.itemPrice.text.toString(),
+            binding.itemCount.text.toString()
+        )
     }
+
+    private fun addNewItem() {
+        if (isEntryValid()) {
+        }
+    }
+
 
     /**
      * Called before fragment is destroyed.
