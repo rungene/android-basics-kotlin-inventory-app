@@ -53,6 +53,7 @@ class ItemListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ItemListAdapter {
         }
+        binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         binding.floatingActionButton.setOnClickListener {
             val action = ItemListFragmentDirections.actionItemListFragmentToAddItemFragment(
