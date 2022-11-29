@@ -22,6 +22,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.example.inventory.databinding.FragmentAddItemBinding
 
@@ -31,6 +32,11 @@ import com.example.inventory.databinding.FragmentAddItemBinding
 class AddItemFragment : Fragment() {
 
     private val viewModel: InventoryViewModel by activityViewModels {
+        InventoryViewModelFactory(
+            (activity?.application as InventoryApplication).database
+                .itemDao()
+        )
+
     }
 
 
