@@ -52,6 +52,9 @@ class ItemListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ItemListAdapter {
+            val action = ItemListFragmentDirections.
+            actionItemListFragmentToItemDetailFragment(it.id)
+            this.findNavController().navigate(action)
         }
         viewModel.allItems.observe(this.viewLifecycleOwner) { items ->
             items.let {
