@@ -28,6 +28,10 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
 
     }
 
+    fun sellItem(item: Item) {
+    }
+
+
 
     private fun getNewItemEntry(itemName: String, itemPrice: String, itemCount: String): Item {
         return Item(
