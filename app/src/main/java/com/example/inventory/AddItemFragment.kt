@@ -30,6 +30,10 @@ import com.example.inventory.databinding.FragmentAddItemBinding
  */
 class AddItemFragment : Fragment() {
 
+    private val viewModel: InventoryViewModel by activityViewModels {
+    }
+
+
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
 
     // Binding object instance corresponding to the fragment_add_item.xml layout
