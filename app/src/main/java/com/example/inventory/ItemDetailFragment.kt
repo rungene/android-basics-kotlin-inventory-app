@@ -67,6 +67,7 @@ class ItemDetailFragment : Fragment() {
 
             sellItem.isEnabled = viewModel.isStockAvailable(item)
             sellItem.setOnClickListener { viewModel.sellItem(item) }
+            deleteItem.setOnClickListener { showConfirmationDialog() }
         }
     }
 
