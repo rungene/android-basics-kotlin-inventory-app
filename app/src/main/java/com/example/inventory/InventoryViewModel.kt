@@ -36,7 +36,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
 
         }
     }
-    
+
     fun deleteItem(item: Item) {
         viewModelScope.launch {
             itemDao.delete(item)
