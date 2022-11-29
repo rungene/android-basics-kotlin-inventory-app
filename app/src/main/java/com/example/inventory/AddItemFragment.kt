@@ -39,7 +39,7 @@ class AddItemFragment : Fragment() {
         )
     }
     lateinit var item: Item
-    
+
 
 
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
